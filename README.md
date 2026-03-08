@@ -1,1 +1,1 @@
-# Malaria_Detection_Project-B
+# Malaria_Detection_Project
