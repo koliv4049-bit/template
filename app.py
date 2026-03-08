@@ -5,7 +5,9 @@ from PIL import Image
 
 app = Flask(__name__)
 
-model = tf.keras.models.load_model("malaria_detection_model.h5", compile=False)
+from tensorflow.keras.models import load_model
+
+model = load_model("malaria_detection_model.h5", compile=False, safe_mode=False)
 
 def predict_image(img):
 
@@ -41,3 +43,4 @@ def index():
 if __name__ == "__main__":
 
     app.run(debug=True)
+
